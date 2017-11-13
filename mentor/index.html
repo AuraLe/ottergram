@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentor Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <header>
+        <h1>Mentor Registration</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-mentor-reg="form">
+                    <div class="form-group">
+                        <label for="summonerName">Summoner Name</label>
+                        <input class="form-control" name="IGN" id="summonerName" required autofocus />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="region">Region</label><br>
+                        <input type="radio" name="region" id="region" value="NA"> North America<br>
+                        <input type="radio" name="region" id="region" value="EU"> Europe<br>
+                        <input type="radio" name="region" id="region" value="LAN"> Latin America<br>
+                        <input type="radio" name="region" id="region" value="OCE"> Oceania<br>
+                        <input type="radio" name="region" id="region" value="AS"> Asia
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leagueDivision">League and Division</label>
+                        <input class="form-control" name="rank" id="leagueDivision" placeholder="Gold 5" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Area of expertise</label><br>
+                        <input type="checkbox" name="role" value="top"> Top<br>
+                        <input type="checkbox" name="role" value="jungle"> Jungle<br>
+                        <input type="checkbox" name="role" value="mid"> Mid<br>
+                        <input type="checkbox" name="role" value="adc"> ADC<br>
+                        <input type="checkbox" name="role" value="support"> Support<br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactInfo">Contact info</label>
+                        <textarea class="form-control" name="contact" id="contactInfo" placeholder="How can mentee contact you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-info">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
