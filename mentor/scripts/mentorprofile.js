@@ -52,4 +52,5 @@
 
     App.Profile = Profile;
     window.App = App;
-})(window); 
+})(window);
+ 
