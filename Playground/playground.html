@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Playground</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main id="outerbox">
+    <h1>Part 2</h1>
+    <p>The command below is used to create a new session with the ID # 001.</p> 
+    <blockquote><code>mySession = new App.Session('001', new App.TSM());</code></blockquote>
+
+    <p>Create a new message with the command below:</p>
+    <blockquote><code>mySession.createMessage({emailAddress: 'insert unique email here', msg:'insert message here'});</code></blockquote>
+    
+    <p>To mark a question that has been answered, use the command below:</p>
+    <blockquote><code>mySession.answerMessage('insert email/sender ID here');</code></blockquote>
+
+    <p>To check on the remaining unanswered messages, use the following command:</p>
+    <blockquote><code>mySession.allMessages();</code></blockquote>
+
+    <h1>Part 1</h1>
+    <p>My idea is that fans can send in questions (or any message) for the team.</p>
+    <p>To start off, you'll need the command below to create a new object.</p>
+    
+    <blockquote><code>var msg = new App.TSM();</code></blockquote>
+
+    <p>To add a question, user has to include their name (doesn't have to be real name) and the question/message they want to send to the team, by using this command.</p>
+
+    <blockquote><code>msg.add('Name', 'Message/Question');</code></blockquote>
+
+    <p>User can look up a question by search for sender's name.</p>
+    <blockquote><code>msg.get('Name');</code></blockquote>
+
+    <p>User can also pull of all the questions available by this command.</p>
+    <blockquote><code>msg.getAll();</code></blockquote>
+
+    <p>A question can be deleted via selecting a user's name.</p>
+    <blockquote><code>msg.remove('Name');</code></blockquote>
+    </main>
+    <script src="js/TSM.js"></script>
+    <script src="js/Session.js"></script>
+
+</body>
+</html>
