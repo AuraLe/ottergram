@@ -1,4 +1,3 @@
-// Module that allows user to add a new profile. Because this is a user profile, not a business order, once it's created, it'll always remain there.
 (function (window) {
     'use strict';
     var App = window.App || {};

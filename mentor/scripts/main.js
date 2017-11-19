@@ -1,6 +1,6 @@
 (function (window){
     'use strict';
-    var FORM_SELECT ='[data-mentor-reg="form]';
+    var FORM_SELECT ='[data-mentor-reg="form"]';
     var App = window.App;
     var Profile = App.Profile;
     var MentorProfile = App.MentorProfile;  
@@ -10,6 +10,6 @@
     var mentorList = new Profile(mentor);
     formHandler.addSubmitHandler(function (data) {
         mentorList.addNewMentor.call(mentorList, data);
-        mentorList.showAllMentor(mentorList);
+        mentorList.showAllMentors(mentorList);
     })
 })(window);

@@ -2,16 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mentor Registration</title>
+    <title>Summoner School Mentorship</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body class="container">
-    <header>
-        <h1>Mentor Registration</h1>
+    <!--Page header-->
+    <header class="header">
+        <div><img src="img/LoL-logo.png" /></div>
     </header>
+
+    <div class="AboutLog">
+    <!--About-->
+    <div id="About" class="panel panel-default">
+        <div class="panel-body">
+            <h2>About</h2>
+            <p>Teaching is also a way of learning. Improve yourself by helping others improve. Join the Summoner School (<a href="https://www.reddit.com/r/summonerschool/">/r/summonerschool/</a>) community and start today!</p>
+            <p>At Summoner School Mentorship, you can sign up to be a mentor or find a mentor for yourself. We only ask you to be respectful, be patient, and be motivated. The <a href="https://www.reddit.com/r/summonerschool/wiki/rules">Golden Rule</a> is crucial for your learning process.</p>
+            <p><em>* Please note that mentoring is completely voluntary and free.</em></p>
+        </div>
+    </div>
+
+
+    <!--Log in-->
+    <div id="Login" class="panel panel-default">
+        <div class="panel-body">
+            <p id="pleaseLog">Please log in before continuing. <br><br>Don't have an account? Just enter your email and password to sign up!</p>
+            <p id="welcome">Welcome to the League of Mentorship, Summoner. Fill out the registration form to become an official Mentor!</p>
+            <section>
+            <div class="form-group">
+                <input id="txtEmail" type="email" placeholder="Email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <input id="txtPassword" type="password" placeholder="Password" class="form-control">
+            </div>
+                <button id="btnLogin" class="btn btn-info">Log in</button>
+
+                <button id="btnSignup" class="btn btn-primary">Sign up</button>
+
+                <button id="btnLogout" class="btn btn-warning hide">Log out</button>
+            </section>
+        </div>
+    </div>
+    </div>
+
+
+    <!--Registration form-->
+    <div id="mentorForm">
     <section>
         <div class="panel panel-default">
             <div class="panel-body">
+                <h1>Mentor Registration</h1>
                 <form data-mentor-reg="form">
                     <div class="form-group">
                         <label for="nameID">Summoner Name</label>
@@ -51,8 +93,16 @@
             </div>
         </div>
     </section>
+    </div>
+
+
+
 </body>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>    
+<script src="scripts/login.js" charset="UTF-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="scripts/mentorprofile.js" charset="UTF-8"></script>
 <script src="scripts/newprofile.js" charset="UTF-8"></script>
+<script src="scripts/mentorformhandler.js" charset="UTF-8"></script>
 <script src="scripts/main.js" charset="UTF-8"></script>
 </html>

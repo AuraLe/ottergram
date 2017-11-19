@@ -1,4 +1,3 @@
-// Module that manages the mentor profile database.
 (function (window) {
     'use strict';
     var App = window.App || {};

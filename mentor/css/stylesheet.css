@@ -1,0 +1,61 @@
+.container {
+    background: #333333;
+}
+
+.header {
+    background-image: url('http://na.leagueoflegends.com/sites/default/files/upload/art/teambuilder-wallpaper.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 2em;
+    box-shadow: inset 0px 0px 50px 30px black;
+}
+
+.header div {
+    height: 40vh;
+    width: 100%;
+    background: rgba(1,1,1,0.6);
+    display: flex;
+}
+
+.header img {
+    display: block;
+    margin: auto;
+    height: 50%;    
+}
+
+#btnLogout {
+    right: 0px;
+}
+
+.AboutLog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#About {
+    width: 60%;
+}
+
+#Login {
+    width: 35%;
+    margin-left: 5%;
+}
+
+@media(max-width:699px) {
+    .AboutLog {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #About {
+        width: 100%;
+    }
+
+    #Login {
+        width: 100%;
+        margin-left: 0;
+    }
+}

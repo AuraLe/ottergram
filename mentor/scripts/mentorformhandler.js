@@ -2,7 +2,7 @@
     'use strict';
     var App = window.App || {};
     var $ = window.jQuery;
-
+  
     function FormHandler(selector) {
       if (!selector) {
         throw new Error('No selector provided');
@@ -22,7 +22,7 @@
         var data = {};
         $(this).serializeArray().forEach(function (item) {
           data[item.name] = item.value;
-          console.log(item.name + ' is ' + item.value);
+          console.log(item.name + ': ' + item.value);
         });
         console.log(data);
         fn(data);
@@ -30,8 +30,8 @@
         this.elements[0].focus();
       });
     };
-
-
+  
     App.FormHandler = FormHandler;
     window.App = App;
-})(window);
+  })(window);
+  
