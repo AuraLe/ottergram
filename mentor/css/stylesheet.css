@@ -44,6 +44,10 @@
 }
 
 @media(max-width:699px) {
+    .header img {
+        height: 15vh;
+    }
+    
     .AboutLog {
         display: flex;
         flex-direction: column;
