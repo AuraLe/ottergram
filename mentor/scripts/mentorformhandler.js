@@ -30,6 +30,21 @@
         this.elements[0].focus();
       });
     };
+
+    FormHandler.prototype.addInputHandler = function (fn) {
+    console.log('Setting input handler for form');
+    this.$formElement.on('input', '[name="rank"]', function (event) {
+      var rank = event.target.value;
+      var message = '';
+      if (fn(rank)) {
+        event.target.setCustomValidity('');
+      } else {
+        message = rank + ' is not a rank!'
+        event.target.setCustomValidity(message);
+      }
+    });
+  };
+
   
     App.FormHandler = FormHandler;
     window.App = App;

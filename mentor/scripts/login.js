@@ -46,9 +46,14 @@
         promise.catch(e => console.log(e.message));
     });
 
+    // Declare constants that will work with displaying login welcome message.
+    const eleWel = document.getElementById('welcome');
+    const txtConst = eleWel.innerHTML;
+
 
     // Logout
     btnLogout.addEventListener('click', e => {
+        eleWel.innerHTML = txtConst;
         firebase.auth().signOut();
     });
 
@@ -57,6 +62,12 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if(firebaseUser) {
             console.log(firebaseUser);
+
+            // Displaying login welcome text with user's email.
+            var txtBoldWel ="<b>" + firebaseUser.email + "</b>";
+            var txtWel = eleWel.innerHTML.replace('Summoner',txtBoldWel);
+            eleWel.innerHTML = txtWel;
+            
             btnLogout.classList.remove('hide');
             btnLogin.classList.add('hide');
             btnSignup.classList.add('hide');

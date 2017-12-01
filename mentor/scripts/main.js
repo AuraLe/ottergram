@@ -6,6 +6,7 @@
     var MentorProfile = App.MentorProfile;  
     var FormHandler = App.FormHandler;
     var formHandler = new FormHandler(FORM_SELECT);
+    var Validation = App.Validation;
     var mentor = new MentorProfile();
     var mentorList = new Profile(mentor);
     formHandler.addSubmitHandler(function (data) {
